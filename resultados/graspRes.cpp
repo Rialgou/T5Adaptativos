@@ -52,8 +52,9 @@ pair<int, double> grasp(vector<string> dataset, int alpha, int timeLimit) {
 
 int main(int argc, char const *argv[]) {
     srand(time(NULL));
-
-    string outputFileName = "results.csv";
+    int m, l;
+    cin >> m >> l;
+    string outputFileName = "results"+to_string(m)+"_"+to_string(l)+".csv";
 
     ofstream outputFile(outputFileName);
 
@@ -65,9 +66,8 @@ int main(int argc, char const *argv[]) {
     // Escribe el encabezado del archivo CSV
     outputFile << "inst; m; l; mh; mhtime" << endl;
     int alpha = 15;
-    int timeLimit = 600;
-    int m, l;
-    cin >> m >> l;
+    int timeLimit = 60;
+    
     for (int inst = 0; inst < 100; inst++) {
         // Construye el nombre del archivo de instancia según el formato
         // deseado.

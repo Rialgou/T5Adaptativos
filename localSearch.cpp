@@ -52,7 +52,7 @@ pair<int,string> localSearch(pair<int,string> greedyResult, vector<string> datas
         int newCost = calculateCost(newResult, dataset);
         double probability = acceptanceProbability(currentCost, newCost, initialTemperature);
 
-        if(probability > (double)rand()/RAND_MAX){
+        if(probability > static_cast<double>(rand()) / RAND_MAX){
             currentResult = newResult;
             currentCost = newCost;
         }

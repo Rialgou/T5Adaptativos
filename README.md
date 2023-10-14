@@ -1,9 +1,27 @@
 # T5Adaptativos
+Heurísticas Greedy para el 2-Optimality Consensus Problem
 
- ## INSTRUCCIONES DE USO ### 
- ### Compila grasp.cpp (g++ grasp.cpp -o nombre ejecutable) 
-            
- <./nombre ejecutable> -i <dirección de instancia> -t <tiempo maximo de ejecución en segundos> [probabilidad]
+## Integrantes
+- Vanessa Suazo
+- Richard González
+- Vicente Cser
+
+## Compilacion
+```bash
+make
+```
+### dependencias:
+- GNU make
+- g++
+
+## Modo de uso
+```bash
+./grasp.out -i <instancia-problema> -t <tiempo-maximo-en-segundos> [probabilidad]
+```
+### Tests
+```bash
+make test
+```
 
 
 

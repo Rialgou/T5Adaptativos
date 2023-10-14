@@ -67,7 +67,6 @@ int main(int argc, char const *argv[]) {
     vector<string> dataset;
     int alpha = atoi(argv[5]);
     int timeLimit = atoi(argv[4]);
-    //cout<<"tiempo limite"<<timeLimit<<endl;
     file.open(path, ios::in);
 
     if (file.is_open()) {
@@ -81,19 +80,5 @@ int main(int argc, char const *argv[]) {
     pair<int,string> result = grasp(dataset,alpha,timeLimit);
     cout<<"Mejor solución final"<<endl;
     cout<<result.second<<" "<<result.first<<endl;
-    /*
-        ciclo donde se aplica grasp
-    */
-    /*string bestSolution;
-    //while(true)
-    //{ 
-        pair<int, string> result = greedyAlgorithm(dataset, alpha);
-        cout<<"solución inicial: "<<result.second<<endl;
-        cout<<"costo inicial: "<<result.first<<endl;
-        pair<int, string> localResult = localSearch(result, dataset);
-        cout<<"solución local: "<<localResult.second<<endl;
-        cout<<"costo local: "<<localResult.first<<endl;
-        //elegir mejor valor 
-    //}*/
     return 0;
 }

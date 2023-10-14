@@ -3,6 +3,7 @@
         "string": "cpp",
         "algorithm": "cpp",
         "vector": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "iosfwd": "cpp"
     }
 }

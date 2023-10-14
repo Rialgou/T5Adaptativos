@@ -67,7 +67,7 @@ int main(int argc, char const *argv[]) {
     vector<string> dataset;
     int alpha = atoi(argv[5]);
     int timeLimit = atoi(argv[4]);
-    cout<<"tiempo limite"<<timeLimit<<endl;
+    //cout<<"tiempo limite"<<timeLimit<<endl;
     file.open(path, ios::in);
 
     if (file.is_open()) {

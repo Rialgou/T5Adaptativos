@@ -1,24 +1,16 @@
 #include "greedy.cpp"
+#include "localSearch.cpp"
 #include <string>
 #include <vector>
+#include <math.h>
 
 using namespace std;
 
 
-pair<int,string> localSearch(pair<int,string> greedyResult, vector<string> dataset){
-    int cost = greedyResult.first;
-    string result = greedyResult.second;
-
-    /*
-    ciclo while, se ira cambiando una letra y recalculando para ver si mejora el costo final
-    */
-    return make_pair(0,"nao");
-}
 
 
 int main(int argc, char const *argv[]) {
     srand(time(NULL));
-
     if (argc > 3) {
         if (argv[1][0] != '-' || argv[1][1] != 'i') {
             cout << "Debes ingresar el comando -i " << endl;
@@ -51,14 +43,12 @@ int main(int argc, char const *argv[]) {
     //while(true)
     //{ 
         pair<int, string> result = greedyAlgorithm(dataset, alpha);
-        //busquedalocal, lo quiero hacer en otro archivo pero para probar lo estoy haciendo en este mismo mientras jaja
-        
+        cout<<"solución inicial: "<<result.second<<endl;
+        cout<<"costo inicial: "<<result.first<<endl;
+        pair<int, string> localResult = localSearch(result, dataset);
+        cout<<"solución local: "<<localResult.second<<endl;
+        cout<<"costo local: "<<localResult.first<<endl;
         //elegir mejor valor 
     //}
-    
-    
-    cout << result.second << endl;
-    cout << result.first << endl;
-
     return 0;
 }
